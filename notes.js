@@ -43,13 +43,13 @@ const listNotes = () => {
     }
 }
 
-const readNote=(title)=>{
-    const notesData=loadNotes();
-    const notePosition=findNote(title);
-    if(notePosition===-1){
+const readNote = (title) => {
+    const notesData = loadNotes();
+    const notePosition = findNote(title);
+    if (notePosition === -1) {
         console.log(chalk.red("Note not found"));
     }
-    else{
+    else {
         console.log(chalk.yellow(notesData[notePosition].body));
     }
 }
@@ -75,5 +75,5 @@ module.exports = {
     addNote: addNote,
     removeNote: removeNote,
     listNotes: listNotes,
-    readNote:readNote,
+    readNote: readNote,
 }
